@@ -1,0 +1,75 @@
+.container_gradient {
+    width: 100%;
+    
+    padding: 140px 0;
+    background-image: conic-gradient(from 90deg at -10% 100%,#bcc1cd 0deg,#bcc1cd 90deg,#fff 1turn);
+}
+
+.flex_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.big_text {
+   font-size: 52px;
+   color:#23272F; 
+   width: 576px;
+   margin-bottom: 28px;
+}
+
+
+.loger_text {
+    width: 770px;
+    font-size: 20px;
+    color: #404756;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.bg {
+    background-color: #e7e9ed;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 400px;
+    margin-bottom: 20px;
+}
+
+.big_text2 {
+    width: 770px;
+    font-size: 20px;
+    color: #404756;
+    line-height: 1.5rem;
+    margin-top: 20px;
+}
+
+.btn_c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    background-color: #fff;
+    color: #404756;
+    margin-top: 25px;
+    padding: 10px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn_c:hover {
+    background-color:#f4f4f4 ;
+    transition: .3s;
+}
+
+.btn_c svg {
+    margin-right: 7px;
+}
+
+.btn_c svg:nth-child(2) {
+    margin-left: 7px; 
+}
