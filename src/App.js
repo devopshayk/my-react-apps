@@ -1,59 +1,49 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ToDo from './Components/Lesson2/ToDo-List/ToDo-List';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tasks: [],
-      newTask: ''
-    };
-  }
+function App() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState('');
 
-  handleNewTaskChange = (e) => {
-    this.setState({ newTask: e.target.value });
-  }
+  const handleNewTaskChange = (e) => {
+    setNewTask(e.target.value);
+  };
 
-  addTask = () => {
-    if (this.state.newTask !== '') {
-      this.setState({
-        tasks: [...this.state.tasks, this.state.newTask],
-        newTask: ''
-      });
+  const addTask = () => {
+    if (newTask !== '') {
+      setTasks([...tasks, newTask]);
+      setNewTask('');
     }
-  }
+  };
 
-  deleteTask = (index) => {
-    const newTasks = [...this.state.tasks];
+  const deleteTask = (index) => {
+    const newTasks = [...tasks];
     newTasks.splice(index, 1);
-    this.setState({ tasks: newTasks });
-  }
+    setTasks(newTasks);
+  };
 
-  render() {
-    return (
-      <div>
-        <h1>ToDo List</h1>
-        <div>
-          <input
-            type="text"
-            value={this.state.newTask}
-            onChange={this.handleNewTaskChange}
-            placeholder="Enter a new task"
-          />
-          <button onClick={this.addTask}>Add Task</button>
-        </div>
-        <ul>
-          {this.state.tasks.map((task, index) => (
-            <ToDo
-              key={index}
-              task={task}
-              onDelete={() => this.deleteTask(index)}
-            />
-          ))}
-        </ul>
+  return (
+    <div>
+      <div className='center'>
+        <input
+          type="text"
+          value={newTask}
+          onChange={handleNewTaskChange}
+          placeholder="Enter a new task"
+        />
+        <button onClick={addTask}>Add Task</button>
       </div>
-    );
-  }
+      <ul>
+        {tasks.map((task, index) => (
+          <ToDo
+            key={index}
+            task={task}
+            onDelete={() => deleteTask(index)}
+          />
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
