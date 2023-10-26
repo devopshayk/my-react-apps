@@ -4,8 +4,8 @@ import Products from './Components/Lesson4/Products/Products.jsx';
 
 
 function App() {
-  const [userSelected, setUserSelected] = useState(true); // Состояние для отслеживания выбора User
-  const [productsSelected, setProductsSelected] = useState(false); // Состояние для отслеживания выбора Products
+  const [userSelected, setUserSelected] = useState(true); 
+  const [productsSelected, setProductsSelected] = useState(false); 
 
   const handleUserClick = () => {
     setUserSelected(true);
@@ -23,8 +23,8 @@ function App() {
         <button onClick={handleUserClick}>User</button>
         <button onClick={handleProductsClick}>Products</button>
       </div>
-      {userSelected && <User />} {/* Отображение компонента User, если userSelected === true */}
-      {productsSelected && <Products />} {/* Отображение компонента Products, если productsSelected === true */}
+      {userSelected && <User />} 
+      {productsSelected && <Products />} 
     </div>
   );
 }

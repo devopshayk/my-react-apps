@@ -52,6 +52,7 @@ button:active {
 .button1 {
     background-color: #33A3FF;
     color: #FFF;
+    margin-bottom: 20px;
 }
 
 .button2 {
