@@ -23,8 +23,8 @@ const Products = () => {
           <div key={index} className='productCard'>
             <h1>{product.name}</h1>
             <p>Price: ${product.price}</p>
-            <img src={product.thumbnail} alt="Product" />
-            <button onClick={() => removeItem(index)}>Delete</button>
+            <img src={product.thumbnail}/>
+            <button onClick={() => removeItem(index)} className='button2'>Delete</button>
           </div>
         );
       })}

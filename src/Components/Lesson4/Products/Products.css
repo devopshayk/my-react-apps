@@ -27,14 +27,34 @@
 }
 
 button {
-    background-color: #ff5733;
-    color: #fff;
+    background-color: #FF5733;
+    color: #FFF;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 20px;
     cursor: pointer;
     margin: 10px 0;
+    border-radius: 5px; 
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 button:hover {
-    background-color: #ff7f33;
+    background-color: #FF8548;
+    transform: scale(1.05); 
+}
+
+button:active {
+    background-color: #FF5F1F;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.button1 {
+    background-color: #33A3FF;
+    color: #FFF;
+}
+
+.button2 {
+    background-color: #33FF5F;
+    color: #FFF;
 }

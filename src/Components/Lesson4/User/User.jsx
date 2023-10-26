@@ -23,7 +23,7 @@ const User = () => {
                         <h1>{user.firstName}</h1>
                         <h1>{user.lastName}</h1>
                         <img src={user.image} />
-                        <button onClick={() => removeItem(index)}>Delete</button>
+                        <button onClick={() => removeItem(index)} className='button1'>Delete</button>
                     </div>
                 );
             })}
