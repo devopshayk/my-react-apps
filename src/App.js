@@ -1,30 +1,15 @@
-import React, { useState } from 'react';
-import User from './Components/Lesson4/User/User.jsx'; 
-import Products from './Components/Lesson4/Products/Products.jsx';
-
+import NavBar from './Components/Lesson5/Navbar/NavBar.jsx'
+import Section from './Components/Lesson5/Section/Section.jsx'
+import Learn from './Components/Lesson5/Navbar/Learn/Learn.jsx';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [userSelected, setUserSelected] = useState(true); 
-  const [productsSelected, setProductsSelected] = useState(false); 
-
-  const handleUserClick = () => {
-    setUserSelected(true);
-    setProductsSelected(false);
-  };
-
-  const handleProductsClick = () => {
-    setUserSelected(false);
-    setProductsSelected(true);
-  };
 
   return (
-    <div className="App">
-      <div>
-        <button onClick={handleUserClick}>User</button>
-        <button onClick={handleProductsClick}>Products</button>
-      </div>
-      {userSelected && <User />} 
-      {productsSelected && <Products />} 
+    <div className='App'>
+      <NavBar />
+      <Section />
+  
     </div>
   );
 }

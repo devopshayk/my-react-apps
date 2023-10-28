@@ -3,6 +3,7 @@ import './User.css'
 
 
 const User = () => {
+   
     const [userData, setUserData] = useState([])
     useEffect(() => {
         fetch('https://dummyjson.com/users')
@@ -16,6 +17,7 @@ const User = () => {
         setUserData(updatedItems);
     };
     return (
+      
         <div className="App">
             {userData.map((user, index) => {
                 return (
