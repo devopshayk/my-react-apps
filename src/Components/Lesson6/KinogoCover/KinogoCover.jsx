@@ -4,7 +4,6 @@ import './KinogoCover.css'
 const KinogoCover = () => {
   return (
     <div className="container-fluid">
-      {/* Обложка на весь экран */}
       <div className="row">
         <div className="col-12">
           <img
@@ -15,7 +14,6 @@ const KinogoCover = () => {
         </div>
       </div>
 
-      {/* Изображение */}
       <div className="row mt-3">
         <div className="col-4">
           <img
@@ -25,7 +23,6 @@ const KinogoCover = () => {
           />
         </div>
 
-        {/* Информация */}
         <div className="col-8">
           <div>
             <h2>Название фильма</h2>
