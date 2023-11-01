@@ -1,15 +1,11 @@
-import NavBar from './Components/Lesson5/Navbar/NavBar.jsx'
-import Section from './Components/Lesson5/Section/Section.jsx'
-import Learn from './Components/Lesson5/Navbar/Learn/Learn.jsx';
-import { Routes, Route } from 'react-router-dom'
+import React from 'react';
+import './App.css';
+import KinogoCover from './Components/Lesson6/KinogoCover/KinogoCover.jsx'; 
 
 function App() {
-
   return (
-    <div className='App'>
-      <NavBar />
-      <Section />
-  
+    <div className="App">
+      <KinogoCover />
     </div>
   );
 }
