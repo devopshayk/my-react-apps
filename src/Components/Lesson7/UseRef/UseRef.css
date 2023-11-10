@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(152, 251, 152);
+    overflow: hidden;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgb(98, 236, 103);
+    }
+
+    50% {
+        background-color: rgb(36, 214, 45);
+    }
+
+    100% {
+        background-color: rgb(2, 77, 4);
+    }
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(25vw) translateY(0);
+    }
+
+    50% {
+        transform: translateX(25vw) translateY(40vh);
+    }
+
+    75% {
+        transform: translateX(0) translateY(40vh);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes moveBoxReverse {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(-25vw) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-25vw) translateY(-40vh);
+    }
+
+    75% {
+        transform: translateX(0) translateY(-40vh);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 170px;
+    height: 170px;
+    background-color: rgb(2, 77, 4);
+    border-radius: 15px;
+    margin: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.active {
+    animation: pulse 3s, moveBox 3s;
+}
+
+.active2 {
+    animation: pulse 3s, moveBoxReverse 3s;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0;
+}
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    animation: pulse 0.3s ease-in-out;
+}
